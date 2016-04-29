@@ -7,8 +7,6 @@ var requireDir = require('require-dir');
 
 var getGithubFileContent = require('./lib/get-github-file-content');
 var wrapCodeInPrettifyPre = require('./lib/wrap-code-in-prettify-pre');
-//var repositories = require('./repositories');
-//var codeSamples = requireDir('code-samples', { recurse: true });
 var reportError = require('./lib/report-error');
 
 var repositories;
