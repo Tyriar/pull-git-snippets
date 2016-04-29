@@ -1,0 +1,25 @@
+{
+  "name": "pull-git-snippets",
+  "version": "0.1.0",
+  "description": "Pull snippets of code from GitHub repositories",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Tyriar/pull-git-snippets.git"
+  },
+  "keywords": [
+    "github",
+    "git",
+    "sync",
+    "code"
+  ],
+  "author": "Tyriar",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Tyriar/pull-git-snippets/issues"
+  },
+  "homepage": "https://github.com/Tyriar/pull-git-snippets#readme"
+}
