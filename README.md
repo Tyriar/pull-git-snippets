@@ -1,9 +1,35 @@
-# sync-code-samples.js
+# Pull Git Snippets
 
 ## Usage
 
-```bash
-node sync-code-samples.js <GITHUB_API_TOKEN>
+```js
+var pullGitSnippets = require('pull-git-snippets');
+var repositories = {
+  'js-sorting': {
+    'user': 'Tyriar',
+    'name': 'js-sorting',
+    'branch': 'master'
+  }
+};
+var codeSamples = {
+  'repository': 'js-sorting',
+  'language': 'JavaScript',
+  'code': [
+    {
+      'file': 'lib/merge-sort.js',
+      'extractor': 'javascriptFunctionExtractor',
+      'extractorValue': 'merge'
+    },
+    {
+      'file': 'lib/merge-sort.js',
+      'extractor': 'javascriptFunctionExtractor',
+      'extractorValue': 'sort',
+      'noSeparator': true
+    }
+  ]
+};
+var githubToken = 'secret';
+pullGitSnippets(repositories, codeSamples, githubToken);
 ```
 
 ## Extractors
