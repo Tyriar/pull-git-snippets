@@ -4,7 +4,7 @@
   "description": "Pull snippets of code from GitHub repositories",
   "main": "index.js",
   "scripts": {
-    "test": "npm test"
+    "test": "xo && nyc ava"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,14 @@
   "bugs": {
     "url": "https://github.com/Tyriar/pull-git-snippets/issues"
   },
-  "homepage": "https://github.com/Tyriar/pull-git-snippets#readme"
+  "homepage": "https://github.com/Tyriar/pull-git-snippets#readme",
+  "devDependencies": {
+    "ava": "^0.14.0",
+    "eslint": "^2.8.0",
+    "nyc": "^6.4.0",
+    "xo": "^0.14.0"
+  },
+  "xo": {
+    "space": 2
+  }
 }

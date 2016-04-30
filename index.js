@@ -3,7 +3,6 @@
 var fs = require('fs');
 
 var Github = require('github-api');
-var requireDir = require('require-dir');
 
 var getGithubFileContent = require('./lib/get-github-file-content');
 var wrapCodeInPrettifyPre = require('./lib/wrap-code-in-prettify-pre');
@@ -23,7 +22,7 @@ function writeJekyllInclude(fileName, code) {
   if (fs.existsSync(fileName)) {
     fs.unlinkSync(fileName);
   }
-  fs.writeFile(fileName, fileContent, function(err) {
+  fs.writeFile(fileName, fileContent, function (err) {
     if (err) {
       throw err;
     }
@@ -35,7 +34,7 @@ function writeJekyllInclude(fileName, code) {
  * @param {Object} languageCodeSample The language code sample spec to fetch.
  */
 function fetchLanguageCodeSample(github, languageCodeSample) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     var repository = repositories[languageCodeSample.repository];
     // TODO: Cache github repos here
     if (typeof repository === 'undefined') {
@@ -46,7 +45,7 @@ function fetchLanguageCodeSample(github, languageCodeSample) {
     var promises = path.map(function (currentPath) {
       return getGithubFileContent(github, repository.user, repository.name, repository.branch, currentPath);
     });
-    Promise.all(promises).then(function(fileContents) {
+    Promise.all(promises).then(function (fileContents) {
       var fileContent = fileContents[0];
       for (var i = 1; i < fileContents.length; i++) {
         var separator = '\n\n\n\n';
@@ -101,7 +100,7 @@ function generateCodeSample(github, codeSample, codeSampleName) {
     var promises = codeSample.map(function (languageCodeSample) {
       return fetchLanguageCodeSample(github, languageCodeSample);
     });
-    Promise.all(promises).then(function(languageCodeSamples) {
+    Promise.all(promises).then(function (languageCodeSamples) {
       var code = languageCodeSamples.join('\n');
       var fileName = '_includes/code-samples/' + name + '.html';
       var markup = wrapCodeInCodeBlock(codeSample, code);
@@ -126,7 +125,9 @@ function sync(_repositories, _codeSamples, githubToken) {
   });
 
   for (var codeSampleName in codeSamples) {
-    generateCodeSample(github, codeSamples[codeSampleName], codeSampleName);
+    if ({}.hasOwnProperty.call(codeSamples, codeSampleName)) {
+      generateCodeSample(github, codeSamples[codeSampleName], codeSampleName);
+    }
   }
 }
 
