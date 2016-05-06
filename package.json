@@ -30,5 +30,10 @@
   },
   "xo": {
     "space": 2
+  },
+  "dependencies": {
+    "escape-html": "^1.0.3",
+    "github-api": "^1.1.0",
+    "require-dir": "^0.3.0"
   }
 }
