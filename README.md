@@ -1,6 +1,6 @@
-# Pull Git Snippets  [![NPM version](http://img.shields.io/npm/v/pull-git-snippets.svg?style=flat)](https://www.npmjs.org/package/pull-git-snippets)
+# Pull Git Snippets
 
-[![Build Status](http://img.shields.io/travis/Tyriar/pull-git-snippets.svg?style=flat)](http://travis-ci.org/Tyriar/pull-git-snippets)
+[![Build Status](https://travis-ci.org/Tyriar/pull-git-snippets.svg?branch=master)](https://travis-ci.org/Tyriar/pull-git-snippets)
 
 ## Usage
 
