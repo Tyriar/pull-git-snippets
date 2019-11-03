@@ -24,7 +24,7 @@
   "homepage": "https://github.com/Tyriar/pull-git-snippets#readme",
   "devDependencies": {
     "ava": "^0.14.0",
-    "eslint": "^2.8.0",
+    "eslint": "^4.18.2",
     "nyc": "^6.4.0",
     "xo": "^0.14.0"
   },
