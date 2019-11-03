@@ -3,9 +3,7 @@
   "version": "0.1.0",
   "description": "Pull snippets of code from GitHub repositories",
   "main": "index.js",
-  "scripts": {
-    "test": "xo && nyc ava"
-  },
+  "scripts": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Tyriar/pull-git-snippets.git"
@@ -22,15 +20,7 @@
     "url": "https://github.com/Tyriar/pull-git-snippets/issues"
   },
   "homepage": "https://github.com/Tyriar/pull-git-snippets#readme",
-  "devDependencies": {
-    "ava": "^0.14.0",
-    "eslint": "^2.8.0",
-    "nyc": "^6.4.0",
-    "xo": "^0.14.0"
-  },
-  "xo": {
-    "space": 2
-  },
+  "devDependencies": {},
   "dependencies": {
     "chalk": "^1.1.3",
     "escape-html": "^1.0.3",
